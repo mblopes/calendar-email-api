@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "olist_mail_calendar"
+version = "0.1.0"
+description = ""
+authors = ["Matheus Abreu <matheus.abreu@olist.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django-504 = "^2.2.9"
+djangorestframework = "^3.12.2"
+google-api-python-client = "^1.12.8"
+google-auth-httplib2 = "^0.0.4"
+google-auth-oauthlib = "^0.4.2"
+python-dotenv = "^0.15.0"
+Jinja2 = "^2.11.3"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
