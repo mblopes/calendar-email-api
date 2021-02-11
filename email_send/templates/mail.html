@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>{{ subject }}</title>
+    <style>
+        .bg-olist-light {
+            background-color: #ABC6FF;
+        }
+
+        .bg-olist {
+            background-color: #0C29D0;
+        }
+
+        .text-olist {
+            color: #0C29D0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="app font-sans min-w-screen min-h-screen bg-grey-lighter py-8 px-4">
+    <div class="mail__wrapper max-w-md mx-auto">
+        <div class="mail__content bg-white p-8 shadow-md">
+            <div class="content__header h-64 flex flex-col items-center justify-center text-center tracking-wide leading-normal bg-olist-light -mx-8 -mt-8">
+                <svg width="200" height="124" viewBox="0 0 200 124" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                >
+                    <g id="Canvas" fill="none">
+                        <g id="logotype-vector-primary" clip-path="url(#clip0)">
+                            <g id="logotype">
+                                <g id="logotype_2">
+                                    <path d="M 18.3777 14.1162C 7.65737 14.1162 0 22.1065 0 32.4273C 0 42.7481 7.65737 50.7384 18.3777 50.7384C 29.0314 50.7384 36.6888 42.7481 36.6888 32.4273C 36.6888 22.1065 29.0314 14.1162 18.3777 14.1162ZM 27.0339 32.4273C 27.0339 38.1537 23.5714 42.615 18.3777 42.615C 13.184 42.615 9.65495 38.1537 9.65495 32.4273C 9.65495 26.7009 13.184 22.2397 18.3777 22.2397C 23.5714 22.2397 27.0339 26.7009 27.0339 32.4273Z"
+                                          transform="translate(36.5317 36.5317)" fill="#0C29D0"/>
+                                    <path d="M 51.6165 0L 42.1613 0L 42.1613 49.9394L 51.6165 49.9394L 51.6165 0Z"
+                                          transform="translate(36.5317 36.5317)" fill="#0C29D0"/>
+                                    <path d="M 68.9471 49.9394L 68.9471 14.9152L 59.4919 14.9152L 59.4919 49.9394L 68.9471 49.9394ZM 68.9471 10.0545L 68.9471 1.99758L 59.4919 1.99758L 59.4919 10.0545L 68.9471 10.0545Z"
+                                          transform="translate(36.5317 36.5317)" fill="#0C29D0"/>
+                                    <path d="M 101.06 18.7106C 97.797 15.6477 93.6021 14.1162 88.941 14.1162C 82.5488 14.1162 76.4229 17.7118 76.4229 24.8365C 76.4229 30.9624 81.0173 33.3595 85.2122 35.1573C 88.6747 36.6888 91.8708 37.7542 91.8708 40.2179C 91.8708 42.3486 89.3406 43.2808 87.4096 43.2808C 84.0137 43.2808 81.8164 41.7493 79.1529 39.1525L 73.7595 44.7457C 77.6214 48.6077 82.4156 50.7384 87.8757 50.7384C 94.6674 50.7384 101.326 47.2094 101.326 39.4854C 101.326 32.8268 95.5996 30.5629 91.0718 28.6985C 88.142 27.5 85.5452 26.368 85.5452 24.1707C 85.5452 22.506 87.1432 21.5072 88.941 21.5072C 91.6045 21.5072 94.0682 22.839 95.866 24.437L 101.06 18.7106Z"
+                                          transform="translate(36.5317 36.5317)" fill="#0C29D0"/>
+                                    <path d="M 126.325 22.7724L 126.325 14.9152L 117.403 14.9152L 117.403 7.19127L 109.413 7.19127L 107.948 14.9152L 103.753 14.9152L 103.753 22.7724L 107.948 22.7724L 107.948 37.3547C 107.948 39.4188 108.081 41.483 108.614 43.2142C 109.879 47.7421 113.541 50.7384 119.001 50.7384C 121.731 50.7384 125.06 50.006 127.324 48.6743L 124.394 41.6828C 123.196 42.282 122.064 42.6815 120.599 42.6815C 118.601 42.6815 117.802 41.4164 117.536 39.3523C 117.403 38.3535 117.403 37.4213 117.403 36.3559L 117.403 22.7724L 126.325 22.7724Z"
+                                          transform="translate(36.5317 36.5317)" fill="#0C29D0"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0">
+                            <rect width="200" height="124" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <div class="content__body py-8 border-b">
+                <p>{{ message }}</p>
+                {% if button_text and button_url %}
+                    <a href="{{ button_url }}">
+                        <button class="text-white text-sm tracking-wide bg-olist rounded w-full my-8 p-4 ">
+                            {{ button_text }}
+                        </button>
+                    </a>
+                {% endif %}
+                <p class="text-sm">
+                    Um só time!<br>
+                    #GoOlist2021
+                </p>
+            </div>
+            <div class="content__footer mt-8 text-center text-grey-darker">
+                <a href="https://olist.com">
+                    <h3 class="text-base text-olist sm:text-lg mb-4"><b>olist</b></h3>
+                </a>
+            </div>
+        </div>
+        <div class="mail__meta text-center text-sm text-grey-darker mt-8">
+            <div class="meta__help">
+                <p class="leading-loose">
+                    <a href="https://www.olist.com/" class="text-grey-darkest">www.olist.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
